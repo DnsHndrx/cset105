@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Pop Quiz
+    </title>
+    <link rel="stylesheet" href="stylesquiz.css">
+    <body>
+        <h1>Pop Quiz</h1>
+        <h3>What color is the sky?</h3>
+        <form>
+            <input type="radio" name="choice" id="c1" value="Blue"> Blue
+            <input type="radio" name="choice" id="c2" value="Red"> Red
+            <input type="radio" name="choice" id="c3" value="Green"> Green
+            <input type="radio" name="choice" id="c4" value="Purple"> Purple
+        </form>
+        <h3>What is the second day of the Business week?</h3>
+        <form>
+            <input type="radio" name="choice" id="c5" value="Monday"> Monday
+            <input type="radio" name="choice" id="c6" value="Sunday"> Sunday
+            <input type="radio" name="choice" id="c7" value="Tuesday"> Tuesday
+            <input type="radio" name="choice" id="c8" value="Friday"> Friday
+        </form>
+        <h3>What is the first color of the rainbow?</h3>
+        <form>
+            <input type="radio" name="choice" id="c9" value="Pink"> Pink
+            <input type="radio" name="choice"id="c0" value="Yellow"> Yellow
+            <input type="radio" name="choice" id="c10" value="Blue"> Blue
+            <input type="radio" name="choice" id="c11" value="Red"> Red
+        </form>
+        <h3>What is the name of Disney's Mascot?</h3>
+        <form>
+            <input type="radio" name="choice" id="c12" value="Mickey"> Mickey
+            <input type="radio" name="choice" id="c13" value="Goofy"> Goofy
+            <input type="radio" name="choice" id="c14" value="Barney"> Barney
+            <input type="radio" name="choice" id="c15" value="Elmo"> Elmo
+        </form>
+            <h3>Is this question correct?</h3>
+        <form>
+            <input type="radio" name="choice" id="c17" value="Yes"> Yes
+            <input type="radio" name="choice" id="c18" value="No"> No
+            <input type="radio" name="choice" id="c19" value="Maybe"> Maybe
+            <input type="radio" name="choice" id="c20" value="Who Knows?"> Who Knows?
+        </form>
+            <button class="button" onclick="Submit()" style="display:block">Click to Submit</button>
+        <h3>Score: </h3>
+        <h3 type="number" id="score">0</h3>
+        <script>
+            let times = 0;
+            function Submit(){
+                if(times==0){
+                    if(document.getElementById("c1").checked){
+                        document.getElementById("score").innerHTML = Number(document.getElementById("score").innerHTML) + 1
+                    }
+                    if(document.getElementById("c7").checked){
+                        document.getElementById("score").innerHTML = Number(document.getElementById("score").innerHTML) + 1
+                    }
+                    if(document.getElementById("c11").checked){
+                        document.getElementById("score").innerHTML = Number(document.getElementById("score").innerHTML) + 1
+                    }
+                    if(document.getElementById("c12").checked){
+                        document.getElementById("score").innerHTML = Number(document.getElementById("score").innerHTML) + 1
+                    }
+                    if(document.getElementById("c18").checked){
+                        document.getElementById("score").innerHTML = Number(document.getElementById("score").innerHTML) + 1
+                    }
+                    times=1;
+                    
+                }
+                
+                if("score===5"){
+                    var audio  = new Audio('MLGHorns.mp3');
+                    audio.load();
+                    audio.play();
+                }
+            }
+        </script>
+    </body>
+</html>

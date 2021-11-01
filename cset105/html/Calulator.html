@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title> Calculator </title>
+        <link rel="stylesheet" href="calcStyles.css">
+    </head>
+    <body>
+        <h2>Denise's Calculator</h2>
+        <table class="input">
+            <tr>
+                <td><input id="result"></td>
+                <td><button onclick="clearValues()">Clear</button></td>
+            </tr>
+        </table>
+        <table class= number> 
+            <tr>
+
+                <td><button id=v1 onclick= "getValues(this)">1</button></td>
+                <td><button id=v2 onclick="getValues(this)">2</button></td>
+                <td><button id=v3 onclick="getValues(this)">3</button></td>
+                <td><button id=vplus onclick="getValues(this)">+</button></td>
+
+            </tr>
+            <tr>
+
+                <td><button id=v4 onclick="getValues(this)">4</button></td>
+                <td><button id=v5 onclick="getValues(this)">5</button></td>
+                <td><button id=v6 onclick="getValues(this)">6</button></td>
+                <td><button id=vminus onclick="getValues(this)">-</button></td>
+
+            </tr>
+            <tr>
+
+                <td><button id=v7 onclick="getValues(this)">7</button></td>
+                <td><button id=v8 onclick="getValues(this)">8</button></td>
+                <td><button id=v9 onclick="getValues(this)">9</button></td>
+                <td><button id=vdivide onclick="getValues(this)">/</button></td>
+
+            </tr>
+            <tr>
+
+                <td><button id=v0 onclick="getValues(this)">0</button></td>
+                <td><button id=vequal onclick="equalTo(this)">=</button></td>
+                <td><button id=vmultiply onclick="getValues(this)">*</button></td>
+                <td><button id=vdelete onclick="deleteNum(this)">Delete</button></td>
+                
+            </tr>
+        </table>
+        <script src="button.js"></script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Gradebook</title>
+    </head>
+    <body>
+        <table>
+            <th>Student Name</th>
+            <th>Exam 1</th>
+            <th>Exam 2</th>
+            <th>Exam 3</th>
+            <th>Average</th>
+            <th></th>
+            <tr>
+                <td><input></td>
+                <td><input type="number" id="e1"></td>
+                <td><input type="number" id="e2"></td>
+                <td><input type="number" id="e3"></td>
+                <td><p id="st1"></p></td>
+                <td><button onclick="document.getElementById('st1').innerHTML = avg(document.getElementById('e1').value,document.getElementById('e2').value,document.getElementById('e3').value) ">Calculate</button></td>
+            </tr>
+            <tr>
+                <td><input></td>
+                <td><input type="number" id="e4"></td>
+                <td><input type="number" id="e5"></td>
+                <td><input type="number" id="e6"></td>
+                <td><p id="st2"></p></td>
+                <td><button onclick="document.getElementById('st2').innerHTML = avg(document.getElementById('e4').value,document.getElementById('e5').value,document.getElementById('e6').value) ">Calculate</button></td>
+            </tr>
+            <tr>
+                <td><input></td>
+                <td><input type="number" id="e7"></td>
+                <td><input type="number" id="e8"></td>
+                <td><input type="number" id="e9"></td>
+                <td><p id="st3"></p></td>
+                <td><button onclick="document.getElementById('st3').innerHTML =  avg(document.getElementById('e7').value,document.getElementById('e8').value,document.getElementById('e9').value) ">Calculate</button></td>
+            </tr>
+            <tr>
+                <td><input></td>
+                <td><input type="number" id="e0"></td>
+                <td><input type="number" id="e10"></td>
+                <td><input type="number" id="e11"></td>
+                <td><p id="st4"></p></td>
+                <td><button onclick="document.getElementById('st4').innerHTML = avg(document.getElementById('e0').value,document.getElementById('e10').value,document.getElementById('e11').value) ">Calculate</button></td>
+            </tr>
+        </table>
+        <script>
+            function avg(x,y,z){
+                x = Number(x)
+                y = Number(y)
+                z = Number(z)
+                return ((x+y+z)/3)
+            }
+        </script>
+    </body>
+</html>

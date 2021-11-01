@@ -1,0 +1,54 @@
+let person= prompt("Please select an option -\nPress 1 to add\nPress 2 to subtract\nPress 3 to multiply\nPress 4 to divide\nPress 5 to quit")
+let number= Number(person)
+
+if(number==1){
+  let firstValueAdd= prompt("Enter first value:")
+  let numberOne= Number(firstValueAdd)
+    if(isNaN(numberOne))
+   console.log("Invalid option")
+
+  let secondValueAdd= prompt("Enter second value:")
+  let numberTwo= Number(secondValueAdd)
+      if(isNaN(numberTwo))
+     console.log("Invalid option")
+
+  console.log(`The sum is ${numberOne+ numberTwo}`)
+}
+if(number==2){
+  let firstValueSub= prompt("Enter first value:")
+  let numberOne= Number(firstValueSub)
+      if(isNaN(numberOne))
+    console.log("Invalid option")
+  
+  let secondValueSub= prompt("Enter second value:")
+  let numberTwo= Number(secondValueSub)
+      if(isNaN(numberTwo))
+    console.log("Invalid option")
+
+  console.log(`The difference is ${numberOne - numberTwo}`)
+}
+if(number==3){
+  let firstValueMulti= prompt("Enter first value:")
+  let numberOne= Number(firstValueMulti)
+      if(isNaN(numberOne))
+    console.log("Invalid option")
+  let secondValueMulti= prompt("Enter second value:")
+  let numberTwo= Number
+  (secondValueMulti)
+      if(isNaN(numberTwo))
+    console.log("Invalid option")
+  console.log(`The product is ${numberOne* numberTwo}`)
+}
+if(number==4){
+  let firstValueDivi= prompt("Enter first value:")
+  let numberOne= Number(firstValueDivi)
+      if(isNaN(numberOne))
+    console.log("Invalid option")
+  let secondValueDivi= prompt("Enter second value:")
+  let numberTwo= Number(secondValueDivi)
+      if(isNaN(numberTwo))
+    console.log("Invalid option")
+  console.log(`The quotient is ${numberOne/ numberTwo}`)
+}
+if(isNaN(number))
+  console.log("Please select a valid option")

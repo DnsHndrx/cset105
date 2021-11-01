@@ -1,0 +1,48 @@
+<script>
+    window.onload = () => 
+    {
+        let ls = document.querySelectorAll('#list li');
+        ls.forEach((ele) => 
+        {
+            ele.onclick = (ele) => 
+            {
+                ele.target.style="text-decoration:line-through;";
+            }
+        });
+    }
+    let items= []
+    list.addEventListener('click', function(e)
+    {
+        let x = document.getElementById(e.target.innerHTML.toString()) //grabs the item that is clicked on
+        let y =(x.innerHTML.toLowerCase()) //converts its name to lowercase
+        let q = document.getElementById(y)  //looks for the item with the lowercase name
+        if(e.target != this && q.ariaValueMax == "0"){  
+            found.appendChild(e.target.cloneNode(true)); //clones object and puts it under the Cart
+            items.push(e.target.innerHTML)
+            let z = document.getElementById(x.innerHTML + "1")
+            z.remove()
+            q.ariaValueMax="1" //if item is visible, hide
+        }
+    })
+    found.addEventListener('click', function(e)
+    {
+        let r = document.getElementById(e.target.innerHTML.toString())
+        let p =(r.innerHTML.toLowerCase())
+        let q = document.getElementById(p)
+        if(e.target != this && q.ariaValueMax=="1")
+        {
+            e.target.remove()
+            e.target.style="text-decoration:none"
+            left.appendChild(e.target.cloneNode(true)); //clones object and puts it under the items left to purchase
+            let index = 0
+            for(let i=0;i<items.length;i++){
+                index =items.indexOf(e.target.innerHTML)
+            }
+            let x = items.splice(index,1)
+            let name = x.toString()
+            let y = document.getElementById(name)
+            y.style="text-decoration:none;";
+            q.ariaValueMax="0" //if its hidden, make visible
+        console.log(items)
+        }})
+</script>

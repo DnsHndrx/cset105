@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <p id= "para" style= "color: purple">
+        Nice Text
+        </p>
+        <p><button onclick="changecolor()">Color Change</button></p>
+        <script>
+            function changecolor(){
+                let para= document.getElementById("para");
+                console.log(para.style.color);
+                para.style.color= "magenta";
+            }
+        </script>
+    </body>
+</html>
